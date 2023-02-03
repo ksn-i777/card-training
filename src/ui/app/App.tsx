@@ -2,18 +2,20 @@ import React from 'react'
 import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { Test } from '../Test'
+import { Header } from '../components/Header'
 
 
 export function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
-        <Route path='/' element={<div>main</div>} />
-        <Route path='/register' element={<div>register</div>} />
-        <Route path='/login' element={<div>login</div>} />
-        <Route path='/recovery' element={<div>recovery-password</div>} />
-        <Route path='/new' element={<div>new-password</div>} />
-        <Route path='/profile' element={<div>profile</div>} />
+        <Route path='/' element={<div>Main</div>} />
+        <Route path='/register' element={<div>Register</div>} />
+        <Route path='/login' element={<div>Login</div>} />
+        <Route path='/recovery' element={<div>Recovery password</div>} />
+        <Route path='/new' element={<div>New password</div>} />
+        <Route path='/profile' element={<div>Profile</div>} />
         <Route path='/404' element={<div>404</div>} />
         <Route path='/test' element={<Test />} />
         <Route path='*' element={<Navigate to='/404' />} />
